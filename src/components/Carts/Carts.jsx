@@ -1,14 +1,15 @@
 import { useState, useEffect } from 'react';
 import { getAllCarts } from "../../services/carts";
 import './Carts.css';
+import { useNavigate } from 'react-router-dom';
 
 export const Carts = () => {
 
   const [carts, setCarts] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     getAllCarts().then( response => {
-      console.log('Carts: ', response);
       setCarts(response)
     } )
   }, [])
@@ -22,7 +23,10 @@ export const Carts = () => {
       <h1>Carts</h1>
       <ul>
         {
-          carts.map(cart => <li key={cart.id}>{cart.title}</li>)
+          carts.map(cart => <li key={cart.id}>
+            Date: {cart.date}
+            <button onClick={()=>navigate(`/carts/${cart.id}`)} >Ver mas</button>
+          </li>)
         }
       </ul>
     </div>

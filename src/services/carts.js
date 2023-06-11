@@ -6,4 +6,12 @@ export const getAllCarts = async () => {
     } catch (error) {
         console.error(error);
     }
-}
+};
+
+export const getCartById = async (id) => {
+    try {
+        return await dynamicFetch(`carts/${id}`,null,'GET');
+    } catch (error) {
+        console.log(error);
+    }
+};
