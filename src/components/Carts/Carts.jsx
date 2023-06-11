@@ -1,18 +1,13 @@
-import { useState, useEffect } from 'react';
-import { getAllCarts } from "../../services/carts";
+import { useContext } from 'react';
 import './Carts.css';
 import { useNavigate } from 'react-router-dom';
+import { FakeShopContext } from '../../context';
 
 export const Carts = () => {
 
-  const [carts, setCarts] = useState([]);
   const navigate = useNavigate();
+  const { carts } = useContext(FakeShopContext);
 
-  useEffect(() => {
-    getAllCarts().then( response => {
-      setCarts(response)
-    } )
-  }, [])
   
   if(!carts || carts.length < 1){
     return <div> Loading... </div>
