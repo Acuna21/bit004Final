@@ -7,7 +7,7 @@ export const Product = () => {
 
   const { id } = useParams();
 
-  const [product, setProduct] = useState({});
+  const [product, setProduct] = useState();
 
   useEffect(() => {
     getProductById(id).then( response => setProduct(response) );
