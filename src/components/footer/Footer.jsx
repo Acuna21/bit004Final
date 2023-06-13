@@ -1,6 +1,6 @@
 import './Footer.css';
 export const Footer = () => {
   return (
-    <footer>Footer</footer>
+    <footer>©Copyright 2023</footer>
   )
 }
