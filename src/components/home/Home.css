@@ -1,3 +1,91 @@
-main{
-    background-color: green;
+main.home{
+    min-height: calc(100vh - 200px);
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 0;
 }
+
+
+.content{
+    height: 300px;
+    width: 90%;
+    margin: 0 auto;
+    background-color: #EEEEEE;
+    border: 1px solid rgb(160, 160, 160);
+    box-shadow: 3px 3px 10px rgb(160, 160, 160);
+}
+
+.content>img{
+    width: 250px;
+    height: 250px;
+    padding: 20px;
+}
+
+/* Inicia estilos para  metricas de productos */
+.products{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 5px 5px 0 0;
+}
+
+.quantity-data{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.counters{
+    max-width: 180px;
+}
+
+.counters p{
+    margin: 5px 0;
+    line-height: 1rem;
+    font-weight: bold;
+}
+
+.counters div{
+    background: white;
+    border: 1px solid gray;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px gray;
+}
+
+.counters div span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+/* Finaliza estilos para metricas de productos */
+
+/* Inicia estilos para metricas de ordenes */
+.carts{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 5px 5px 0 0;
+}
+
+.most-bought{
+    display: flex;
+}
+
+.most-bought-item{
+    width: 120px;
+}
+
+.most-bought-item img{
+    width: 70px;
+}
+/* Finaliza estilos para metricas de ordenes */
+
