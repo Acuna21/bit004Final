@@ -1,10 +1,17 @@
 import { Link } from 'react-router-dom';
+import shop from '../../assets/shop.png';
 import './NavBar.css';
 export const NavBar = () => {
   return (
     <nav>
-      <Link to={'/products'}>Productos</Link>
-      <Link to={'/carts'}>Carts</Link>
+      <div className='nav-bar'>
+        <Link to={'/'} ><img src={shop} /></Link>
+        <ul>
+          <li><Link to={'/'}>Inicio</Link></li>
+          <li><Link to={'/products'}>Productos</Link></li>
+          <li><Link to={'/carts'}>Órdenes</Link></li>
+        </ul>
+      </div>
     </nav>
   )
 }
