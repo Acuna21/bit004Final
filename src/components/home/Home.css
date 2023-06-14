@@ -96,6 +96,7 @@ main.home{
     border: 1px solid gray;
     border-radius: 5px;
     background: white;
+    padding: 5px;
 }
 
 .most-bought-item:hover{

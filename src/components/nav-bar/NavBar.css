@@ -14,6 +14,13 @@ nav .nav-bar{
     justify-content: space-between;
 }
 
+.nav-title{
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 nav img{
     width: 80px;
 }
