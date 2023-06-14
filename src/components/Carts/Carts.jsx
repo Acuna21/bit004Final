@@ -4,9 +4,27 @@ import { useNavigate } from 'react-router-dom';
 import { FakeShopContext } from '../../context';
 
 export const Carts = () => {
-
+  const HEADERS = ['#','Fecha', 'Cant. Productos','Acciones']
   const navigate = useNavigate();
   const { carts } = useContext(FakeShopContext);
+
+  const getDataTable = () => {
+    return carts.map( (cart, index) => {
+      return (
+        <tr key={cart.id}>
+          <th className='numeral' scope="row">{index+1}</th>
+          <td>{new Date(cart.date).toDateString()}</td>
+          <td>{cart.products.length}</td>
+          <td>
+            <button className='pr-detail-btn' 
+              onClick={() => navigate(`/carts/${cart.id}`)}
+            >
+              Detalles</button>
+          </td>
+        </tr>
+      )
+    })
+  }
 
   
   if(!carts || carts.length < 1){
@@ -14,16 +32,22 @@ export const Carts = () => {
   }
 
   return (
-    <div>
+    <div className='container carts-container'>
       <h1>Carts</h1>
-      <ul>
-        {
-          carts.map(cart => <li key={cart.id}>
-            Date: {cart.date}
-            <button onClick={()=>navigate(`/carts/${cart.id}`)} >Ver mas</button>
-          </li>)
-        }
-      </ul>
+      <table className="table table-success table-striped">
+        <thead>
+          <tr>
+            {
+              HEADERS.map( header => <th key={header} scope='col' >{header}</th>)
+            }
+          </tr>
+        </thead>
+        <tbody className="table-group-divider">
+          {
+            getDataTable()
+          }
+        </tbody>
+      </table>
     </div>
   )
 }
