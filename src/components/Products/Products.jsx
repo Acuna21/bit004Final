@@ -1,13 +1,13 @@
 import { useContext } from 'react';
 import './Products.css';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import { FakeShopContext } from '../../context';
 
 // eslint-disable-next-line react/prop-types
 export const Products = () => {
   const HEADERS = ['#','Titulo', 'Precio', 'Categoría', 'Acciones'];
 
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     const { products } = useContext(FakeShopContext);
 
     const getDataTable = () => {
@@ -19,7 +19,7 @@ export const Products = () => {
           <td>{product.category}</td>
           <td>
             <button className='pr-detail-btn' 
-              onClick={() => navigate(`/products/${product.id}`)}
+              // onClick={() => navigate(`/products/${product.id}`)}
             >
               Detalles</button>
           </td>

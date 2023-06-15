@@ -1,11 +1,11 @@
 import { useContext } from 'react';
 import './Carts.css';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import { FakeShopContext } from '../../context';
 
 export const Carts = () => {
   const HEADERS = ['#','Fecha', 'Cant. Productos','Acciones']
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const { carts } = useContext(FakeShopContext);
 
   const getDataTable = () => {
@@ -17,7 +17,7 @@ export const Carts = () => {
           <td>{cart.products.length}</td>
           <td>
             <button className='pr-detail-btn' 
-              onClick={() => navigate(`/carts/${cart.id}`)}
+              // onClick={() => navigate(`/carts/${cart.id}`)}
             >
               Detalles</button>
           </td>

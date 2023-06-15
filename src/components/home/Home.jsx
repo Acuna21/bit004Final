@@ -93,7 +93,7 @@ export const Home = () => {
           <p>Mas vendidos</p>
           <div className='most-bought'>
             {generalInfo.mostBounght ?  generalInfo.mostBounght.map( bounght => (
-            <Link to={'/products/'+bounght.id} key={bounght.id}>
+            <Link to={'/'} key={bounght.id}>
               <div  className='most-bought-item' title={bounght.title}>
                 <p>{bounght.title}</p>
                 <img src={bounght.image} alt="" />
