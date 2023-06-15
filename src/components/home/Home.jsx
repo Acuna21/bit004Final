@@ -103,7 +103,7 @@ export const Home = () => {
           </div>
         </div>
         <div className='counters'>
-          <p>Cantidad </p>
+          <p>Cantidad total de ordenes </p>
           <div><span>{generalInfo.totalCarts ? generalInfo.totalCarts : 'Loading...'}</span></div>
         </div>
       </div>
